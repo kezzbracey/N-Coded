@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+    {{! Modified: The big featured header on the homepage, with the site logo and description }}
+    <header id="site-head">
+        <div class="vertical">
+            <div id="site-head-content">
+
+                <div class="blog-title-wrap"><div class="inner">
+                {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+                <h1 class="blog-title">{{@blog.title}}</h1>
+                </div></div>
+
+                <div class="blog-description-wrap"><div class="inner">
+                <h2 class="blog-description">{{@blog.description}}</h2>
+                </div></div>
+
+            </div>
+        </div>
+    </header>
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    <footer class="site-footer inner">
+        <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
+        <div class="inner">
+             <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">&nbsp;</a><a href="http://ghost.org">Ghost</a> | <a href="https://github.com/polygonix/N-Coded">N'Coded</a> theme forked from <a href="http://ghost.org">Casper</a> by <a href="http://www.polygonix.com">Polygonix</a></section>
+        </div>
+    </footer>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>
