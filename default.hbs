@@ -13,11 +13,11 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/styles/default.css">
-    <script type="text/javascript" src="/assets/css/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/highlight/styles/default.css"}}">
+    <script type="text/javascript" src="{{asset "css/highlight/highlight.pack.js"}}"></script>
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     
 
@@ -51,7 +51,7 @@
     <footer class="site-footer inner">
         <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
         <div class="inner">
-             <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
+             <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013-2014 &bull; All rights reserved.</section>
              <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">&nbsp;</a><a href="http://ghost.org">Ghost</a> | <a href="https://github.com/polygonix/N-Coded">N'Coded</a> theme forked from <a href="http://ghost.org">Casper</a> by <a href="http://www.polygonix.com">Polygonix</a></section>
         </div>
     </footer>
@@ -60,7 +60,7 @@
     {{ghost_foot}}
 
     {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="/assets/js/index.js"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     {{! Mathjax configuration}}
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
