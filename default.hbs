@@ -13,11 +13,11 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link rel="stylesheet" type="text/css" href="/assets/css/highlight/styles/default.css">
-    <script type="text/javascript" src="/assets/css/highlight/highlight.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/highlight/styles/default.css"}}">
+    <script type="text/javascript" src="{{asset "css/highlight/highlight.pack.js"}}"></script>
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link href='//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     
 
@@ -34,7 +34,7 @@
 
                 <div class="blog-title-wrap"><div class="inner">
                 {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-                <h1 class="blog-title"><a href"{{@blog.url}}" style="color: rgb(51, 51, 51);">{{@blog.title}}</a></h1>
+                <h1 class="blog-title"><a href="{{@blog.url}}" style="color: rgb(51, 51, 51);">{{@blog.title}}</a></h1>
                 </div></div>
 
                 <div class="blog-description-wrap"><div class="inner">
@@ -60,7 +60,7 @@
     {{ghost_foot}}
 
     {{! The main JavaScript file for Casper }}
-    <script type="text/javascript" src="/assets/js/index.js"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     {{! Mathjax configuration}}
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
